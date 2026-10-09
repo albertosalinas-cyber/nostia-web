@@ -1348,7 +1348,6 @@ footer{
   </div>
 </footer>
 
-<!-- THREE.JS -->
 <!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -1651,30 +1650,7 @@ function loadYouTube(element) {
     style="width:100%;height:100%;border:none;position:absolute;top:0;left:0;">
   </iframe>`;
 }
-// ============ PAUSAR VIDEO CUANDO NO SE VE ============
-const videoHero = document.querySelector('.nodo-video');
-if (videoHero) {
-  const videoObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        videoHero.play().catch(() => {});
-      } else {
-        videoHero.pause();
-      }
-    });
-  }, { threshold: 0.1 });
-  
-  videoObserver.observe(videoHero);
-  
-  // Pausar también cuando la pestaña no está visible
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      videoHero.pause();
-    } else {
-      videoHero.play().catch(() => {});
-    }
-  });
-}
+
 // ============ SMOOTH SCROLL ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
