@@ -196,7 +196,25 @@ nav.scrolled{padding:10px 5%;}
   .dock-item{padding:8px 10px;}
 }
 @media(max-width:768px){
-  .dock{display:none;}
+  .dock{
+    display:flex;
+    overflow-x:auto;
+    padding:8px 10px;
+    gap:4px;
+    max-width:95vw;
+    scrollbar-width:none;
+  }
+  .dock::-webkit-scrollbar{display:none;}
+  .dock-item{
+    flex-shrink:0;
+    padding:6px 8px;
+  }
+  .dock-item .dock-label{
+    font-size:0.55rem;
+  }
+  nav{
+    padding:10px 3%;
+  }
 }
 
 /* HERO */
@@ -1466,7 +1484,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 const particlesGeometry = new THREE.BufferGeometry();
-const particlesCount = 800;
+const particlesCount = 300;
 const posArray = new Float32Array(particlesCount * 3);
 const colorArray = new Float32Array(particlesCount * 3);
 
@@ -1506,7 +1524,7 @@ const lineGeometry = new THREE.BufferGeometry();
 const linePositions = [];
 const lineColors = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 40; i++) {
   const x1 = (Math.random() - 0.5) * 60;
   const y1 = (Math.random() - 0.5) * 60;
   const z1 = (Math.random() - 0.5) * 60;
@@ -1584,7 +1602,7 @@ gsap.from('.pillar', {
   clearProps: 'all',
   scrollTrigger: {
     trigger: '.pillars',
-    start: 'top 85%',
+    start: 'top 95%',
     toggleActions: 'play none none none',
     once: true
   }
@@ -1600,7 +1618,7 @@ gsap.from('.feature', {
   clearProps: 'all',
   scrollTrigger: {
     trigger: '.features',
-    start: 'top 85%',
+    start: 'top 95%',
     toggleActions: 'play none none none',
     once: true
   }
@@ -1616,7 +1634,7 @@ gsap.from('.step', {
   clearProps: 'all',
   scrollTrigger: {
     trigger: '.install-steps',
-    start: 'top 85%',
+    start: 'top 95%',
     toggleActions: 'play none none none',
     once: true
   }
@@ -1632,7 +1650,7 @@ gsap.from('.service', {
   clearProps: 'all',
   scrollTrigger: {
     trigger: '.services',
-    start: 'top 85%',
+    start: 'top 95%',
     toggleActions: 'play none none none',
     once: true
   }
@@ -1677,7 +1695,7 @@ gsap.from('.contacto-card', {
   clearProps: 'all',
   scrollTrigger: {
     trigger: '.contacto-grid',
-    start: 'top 85%',
+    start: 'top 95%',
     toggleActions: 'play none none none',
     once: true
   }
