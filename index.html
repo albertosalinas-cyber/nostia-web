@@ -49,16 +49,8 @@ body{
   transition:width 0.3s,height 0.3s,background 0.3s;
   mix-blend-mode:screen;
 }
-.cursor-ring{
-  position:fixed;width:40px;height:40px;border-radius:50%;
-  border:1px solid rgba(0,229,255,0.5);
-  pointer-events:none;z-index:9998;
-  transform:translate(-50%,-50%);
-  transition:width 0.3s,height 0.3s,border 0.3s;
-}
 .cursor.hover{width:20px;height:20px;background:var(--amber);}
-.cursor-ring.hover{width:60px;height:60px;border-color:var(--amber);}
-@media(max-width:768px){.cursor,.cursor-ring{display:none;} body{cursor:auto;}}
+@media(max-width:768px){.cursor{display:none;} body{cursor:auto;}}
 
 /* LOADER */
 .loader{
@@ -927,7 +919,6 @@ footer{
 
 <!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- CANVAS 3D -->
 
@@ -1372,9 +1363,7 @@ window.addEventListener('load', () => {
 
 // ============ CURSOR ============
 const cursor = document.getElementById('cursor');
-const cursorRing = document.getElementById('cursorRing');
 let mouseX = 0, mouseY = 0;
-let ringX = 0, ringY = 0;
 
 document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
@@ -1383,23 +1372,12 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.top = mouseY + 'px';
 });
 
-function animateRing() {
-  ringX += (mouseX - ringX) * 0.15;
-  ringY += (mouseY - ringY) * 0.15;
-  cursorRing.style.left = ringX + 'px';
-  cursorRing.style.top = ringY + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-
 document.querySelectorAll('a, button, .pillar, .feature, .service, .stack-chip, .dock-item, .step, .contacto-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.classList.add('hover');
-    cursorRing.classList.add('hover');
   });
   el.addEventListener('mouseleave', () => {
     cursor.classList.remove('hover');
-    cursorRing.classList.remove('hover');
   });
 });
 
