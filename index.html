@@ -371,8 +371,7 @@ nav.scrolled{padding:10px 5%;}
   pointer-events:none;
 }
 .orbita-1{width:95%;height:95%;}
-.orbita-2{width:110%;height:110%;border-color:rgba(201,135,58,0.15);animation-duration:45s;animation-direction:reverse;}
-.orbita-3{width:80%;height:80%;border-color:rgba(168,85,247,0.12);animation-duration:20s;}
+  
 @keyframes orbitaGirar{
   from{transform:rotate(0deg);}
   to{transform:rotate(360deg);}
@@ -1002,8 +1001,6 @@ footer{
 
     <div class="nodo-container">
       <div class="orbita orbita-1"></div>
-      <div class="orbita orbita-2"></div>
-      <div class="orbita orbita-3"></div>
 
       <img class="nodo-video" src="activos/hero-loop-v2.jpg" alt="NOST-IA en acción" loading="lazy">
     </div>
@@ -1466,12 +1463,6 @@ const contadorObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 contadores.forEach(c => contadorObserver.observe(c));
-
-window.addEventListener('resize', () => {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
-});
 
 // ============ GSAP REVEAL ============
 gsap.registerPlugin(ScrollTrigger);
