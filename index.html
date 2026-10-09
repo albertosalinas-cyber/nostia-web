@@ -989,7 +989,7 @@ footer{
       <div class="orbita orbita-2"></div>
       <div class="orbita orbita-3"></div>
 
-      <video class="nodo-video" autoplay loop muted playsinline preload="metadata">
+      <video class="nodo-video" autoplay loop muted playsinline preload="metadata" disablepictureinpicture>
         <source src="activos/hero-loop.mp4" type="video/mp4">
         Tu navegador no soporta video HTML5.
       </video>
@@ -1637,6 +1637,30 @@ document.querySelectorAll('.pillar, .feature, .step, .service').forEach(card => 
   });
 });
 
+// ============ PAUSAR VIDEO CUANDO NO SE VE ============
+const videoHero = document.querySelector('.nodo-video');
+if (videoHero) {
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        videoHero.play().catch(() => {});
+      } else {
+        videoHero.pause();
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  videoObserver.observe(videoHero);
+  
+  // Pausar también cuando la pestaña no está visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      videoHero.pause();
+    } else {
+      videoHero.play().catch(() => {});
+    }
+  });
+}
 // ============ SMOOTH SCROLL ============
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
