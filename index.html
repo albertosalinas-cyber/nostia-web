@@ -650,6 +650,31 @@ h2{
   overflow:hidden;
   background:#000;
 }
+  .youtube-lazy{
+  position:relative;
+  width:100%;
+  height:100%;
+  cursor:pointer;
+  background:#000;
+  border-radius:14px;
+  overflow:hidden;
+}
+.youtube-lazy img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.youtube-play-btn{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  transition:transform 0.3s;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+}
+.youtube-lazy:hover .youtube-play-btn{
+  transform:translate(-50%,-50%) scale(1.15);
+}
 .video-container iframe{
   position:absolute;
   top:0;left:0;
@@ -1111,14 +1136,15 @@ footer{
       <span class="demo-title">NOST-IA v1.0.1 — Demo oficial</span>
     </div>
     <div class="video-container">
-      <iframe 
-        id="videoDemo"
-        src="https://www.youtube-nocookie.com/embed/MGZjfRAD410?rel=0&modestbranding=1&enablejsapi=1&origin=https://nostia.com.ar"
-        title="NOST-IA: La Inteligencia Artificial al servicio de los comercios de barrio"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+      <div class="youtube-lazy" data-video-id="MGZjfRAD410" onclick="loadYouTube(this)">
+        <img src="https://img.youtube.com/vi/MGZjfRAD410/maxresdefault.jpg" alt="NOST-IA Demo" loading="lazy">
+        <div class="youtube-play-btn">
+          <svg viewBox="0 0 68 48" width="68" height="48">
+            <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#ff0000"/>
+            <path d="M 45,24 27,14 27,34" fill="#fff"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1634,6 +1660,19 @@ document.querySelectorAll('.pillar, .feature, .step, .service').forEach(card => 
   });
 });
 
+// ============ YOUTUBE LAZY LOAD ============
+function loadYouTube(element) {
+  const videoId = element.getAttribute('data-video-id');
+  const parent = element.parentElement;
+  parent.innerHTML = `<iframe 
+    src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&origin=https://nostia.com.ar"
+    title="NOST-IA Demo"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="width:100%;height:100%;border:none;position:absolute;top:0;left:0;">
+  </iframe>`;
+}
 // ============ PAUSAR VIDEO CUANDO NO SE VE ============
 const videoHero = document.querySelector('.nodo-video');
 if (videoHero) {
