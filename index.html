@@ -275,9 +275,12 @@ nav.scrolled{padding:10px 5%;}
 .titulo-principal .char{
   display:inline-block;
   background:linear-gradient(90deg,#00e5ff 0%,#a855f7 25%,#ff3b5c 50%,#a855f7 75%,#00e5ff 100%);
+  background-size:300% 100%;
   -webkit-background-clip:text;background-clip:text;
   -webkit-text-fill-color:transparent;
-  will-change:opacity;
+  animation:charGradient 6s linear infinite;
+  filter:drop-shadow(0 0 30px rgba(0,229,255,0.4));
+  will-change:transform,opacity,filter;
   position:relative;
   opacity:0;
 }
@@ -295,11 +298,11 @@ nav.scrolled{padding:10px 5%;}
 }
 @keyframes charWave{
   0%{
-    filter:drop-shadow(0 0 30px rgba(0,229,255,0.9)) drop-shadow(0 0 60px rgba(0,229,255,0.5));
-    transform:translateY(-4px) scale(1.05);
+    filter:drop-shadow(0 0 40px rgba(0,229,255,1));
+    transform:translateY(-3px) scale(1.03);
   }
   100%{
-    filter:drop-shadow(0 0 20px rgba(0,229,255,0.3)) drop-shadow(0 0 40px rgba(168,85,247,0.15));
+    filter:drop-shadow(0 0 30px rgba(0,229,255,0.4));
     transform:translateY(0) scale(1);
   }
 }
@@ -1033,8 +1036,7 @@ footer{
   <h2>La tecnología más avanzada<br>no debe ser un privilegio.</h2>
   <p class="section-sub">
     NOST-IA nace de una convicción: la Inteligencia Artificial debe estar al
-    servicio del pueblo trabajador, no de las corporaciones que cobran en dólares
-    y se apropian de los datos privados.
+    servicio de la gente común, al servicio de las PYEMES, al servicio de los comercios de barri.
   </p>
 
   <div class="pillars">
@@ -1161,7 +1163,7 @@ footer{
 <!-- INSTALACIÓN -->
 <section id="instalacion">
   <span class="section-tag">// 05 — Instalación</span>
-  <h2>Instalación en 2 pasos.<br>Sin conocimientos técnicos.</h2>
+  <h2>Instalación en 3 pasos.<br>Sin conocimientos técnicos.</h2>
   <p class="section-sub">
     No necesitás instalar Node.js, ni ejecutar comandos, ni nada por el estilo.
     Todo viene incluido en el paquete.
