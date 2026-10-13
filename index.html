@@ -1047,11 +1047,219 @@ footer{
       </div>
     </div>
 
-    <div class="nodo-container">
-      <div class="orbita orbita-1"></div>
+    <div class="nodo-container nodo-dashboard">
+  <svg class="nodo-svg" viewBox="0 0 1400 700" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="auroraBg" cx="50%" cy="50%" r="60%">
+        <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.18"/>
+        <stop offset="50%" stop-color="#a855f7" stop-opacity="0.10"/>
+        <stop offset="100%" stop-color="#ffb800" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="panelBg" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#14192d"/>
+        <stop offset="100%" stop-color="#0a0c1a"/>
+      </linearGradient>
+      <linearGradient id="mateBody" x1="20%" y1="10%" x2="80%" y2="90%">
+        <stop offset="0%" stop-color="#1e293b"/>
+        <stop offset="40%" stop-color="#0f172a"/>
+        <stop offset="100%" stop-color="#050810"/>
+      </linearGradient>
+      <linearGradient id="mateRim" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00e5ff"/>
+        <stop offset="50%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#10b981"/>
+      </linearGradient>
+      <linearGradient id="bombillaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00e5ff"/>
+        <stop offset="50%" stop-color="#e2e8f0"/>
+        <stop offset="100%" stop-color="#38bdf8"/>
+      </linearGradient>
+      <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#d97706"/>
+      </linearGradient>
+      <linearGradient id="lineChartGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.1"/>
+        <stop offset="100%" stop-color="#10b981" stop-opacity="0.6"/>
+      </linearGradient>
+      <filter id="glowSm">
+        <feGaussianBlur stdDeviation="2" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glowMd">
+        <feGaussianBlur stdDeviation="4" result="b"/>
+        <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
 
-      <img class="nodo-video" src="activos/hero-loop-v2.jpg" alt="NOST-IA en acción" loading="lazy">
-    </div>
+    <rect width="1400" height="700" rx="24" fill="#05060e"/>
+    <ellipse cx="700" cy="350" rx="750" ry="420" fill="url(#auroraBg)"/>
+
+    <g opacity="0.04" stroke="#00e5ff" stroke-width="0.5">
+      <line x1="0" y1="100" x2="1400" y2="100"/>
+      <line x1="0" y1="200" x2="1400" y2="200"/>
+      <line x1="0" y1="300" x2="1400" y2="300"/>
+      <line x1="0" y1="400" x2="1400" y2="400"/>
+      <line x1="0" y1="500" x2="1400" y2="500"/>
+      <line x1="0" y1="600" x2="1400" y2="600"/>
+    </g>
+
+    <g transform="translate(700, 380) scale(2.2)" opacity="0.08">
+      <ellipse cx="0" cy="-40" rx="55" ry="12" fill="#00e5ff"/>
+      <path d="M-55,-36 C-70,30 -55,90 0,100 C55,90 70,30 55,-36 Z" fill="#00e5ff"/>
+      <line x1="35" y1="-60" x2="75" y2="-110" stroke="#00e5ff" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="75" cy="-110" r="5" fill="#00e5ff"/>
+    </g>
+
+    <g transform="translate(40, 30)">
+      <g transform="translate(0, 0) scale(0.4)">
+        <ellipse cx="0" cy="-40" rx="55" ry="12" fill="#1e293b" stroke="url(#mateRim)" stroke-width="3"/>
+        <ellipse cx="0" cy="-40" rx="45" ry="8" fill="#10b981"/>
+        <path d="M-55,-36 C-70,30 -55,90 0,100 C55,90 70,30 55,-36 Z" fill="url(#mateBody)" stroke="#38bdf8" stroke-width="2"/>
+        <rect x="-25" y="10" width="50" height="50" rx="6" fill="#0a0f1d" stroke="url(#chipGrad)" stroke-width="2.5"/>
+        <rect x="-14" y="21" width="28" height="28" rx="3" fill="#f59e0b" filter="url(#glowSm)">
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+        </rect>
+        <line x1="35" y1="-60" x2="75" y2="-110" stroke="url(#bombillaGrad)" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="75" cy="-110" r="5" fill="#00e5ff"/>
+      </g>
+      <text x="90" y="12" font-family="'Space Grotesk', sans-serif" font-size="20" font-weight="700" fill="#e8ecf5" letter-spacing="1.5">NOST-IA</text>
+      <text x="90" y="34" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8a92a8" letter-spacing="2">// NODO OPERATIVO SOBERANO TERRITORIAL</text>
+    </g>
+
+    <g transform="translate(1240, 55)">
+      <circle r="5" fill="#10b981" filter="url(#glowMd)">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="15" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#10b981" letter-spacing="1.5">SISTEMA ACTIVO LOCAL</text>
+    </g>
+
+    <g stroke="#00e5ff" stroke-width="0.8" opacity="0.2" fill="none">
+      <path d="M700,380 Q400,300 260,140"/>
+      <path d="M700,380 Q700,250 700,140"/>
+      <path d="M700,380 Q1000,300 1140,140"/>
+    </g>
+
+    <g transform="translate(40, 100)">
+      <rect width="420" height="440" rx="18" fill="url(#panelBg)" stroke="#00e5ff" stroke-opacity="0.25"/>
+      <g transform="translate(20, 20)">
+        <rect width="110" height="24" rx="12" fill="#00e5ff" fill-opacity="0.15" stroke="#00e5ff" stroke-opacity="0.5"/>
+        <text x="14" y="16" font-family="'Inter', sans-serif" font-size="10" fill="#00e5ff" font-weight="600">📦 INVENTARIO</text>
+        <text x="380" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8a92a8">LATENCIA 0.825</text>
+      </g>
+      <g transform="translate(20, 70)">
+        <rect width="380" height="80" rx="8" fill="#050810" stroke="#00e5ff" stroke-opacity="0.3"/>
+        <g opacity="0.7">
+          <rect x="20" y="15" width="2" height="50" fill="#00e5ff"/>
+          <rect x="26" y="15" width="4" height="50" fill="#00e5ff"/>
+          <rect x="34" y="15" width="2" height="50" fill="#00e5ff"/>
+          <rect x="40" y="15" width="6" height="50" fill="#00e5ff"/>
+          <rect x="50" y="15" width="3" height="50" fill="#00e5ff"/>
+          <rect x="58" y="15" width="2" height="50" fill="#00e5ff"/>
+          <rect x="64" y="15" width="5" height="50" fill="#00e5ff"/>
+          <rect x="74" y="15" width="3" height="50" fill="#00e5ff"/>
+          <rect x="82" y="15" width="2" height="50" fill="#00e5ff"/>
+        </g>
+        <g>
+          <rect x="20" y="8" width="1.5" height="64" fill="#00ff9d" opacity="0.9" filter="url(#glowSm)">
+            <animate attributeName="x" values="20;100;20" dur="2.8s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="18" y="8" width="5" height="64" fill="#00ff9d" opacity="0.15" filter="url(#glowMd)">
+            <animate attributeName="x" values="18;98;18" dur="2.8s" repeatCount="indefinite"/>
+          </rect>
+          <circle r="2" fill="#00ff9d" filter="url(#glowMd)">
+            <animate attributeName="cx" values="20.75;100.75;20.75" dur="2.8s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="8;8;8" dur="2.8s" repeatCount="indefinite"/>
+          </circle>
+          <circle r="2" fill="#00ff9d" filter="url(#glowMd)">
+            <animate attributeName="cx" values="20.75;100.75;20.75" dur="2.8s" repeatCount="indefinite"/>
+            <animate attributeName="cy" values="72;72;72" dur="2.8s" repeatCount="indefinite"/>
+          </circle>
+        </g>
+        <text x="20" y="66" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00e5ff">ESCANEADO: LOTE #4902</text>
+        <text x="360" y="66" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" font-weight="600">OK</text>
+      </g>
+      <g transform="translate(20, 180)">
+        <text font-family="'Inter', sans-serif" font-size="11" fill="#8a92a8">Stock Actual</text>
+        <text x="380" y="0" text-anchor="end" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#e8ecf5" font-weight="700">142 / 180 u.</text>
+        <rect y="15" width="380" height="6" rx="3" fill="#0a0c1a"/>
+        <rect y="15" width="300" height="6" rx="3" fill="url(#mateRim)"/>
+      </g>
+      <g transform="translate(20, 400)">
+        <text font-family="'Inter', sans-serif" font-size="10" fill="#10b981">✓ Reposición automatizada sin error manual</text>
+      </g>
+    </g>
+
+    <g transform="translate(490, 100)">
+      <rect width="420" height="440" rx="18" fill="url(#panelBg)" stroke="#ffb800" stroke-opacity="0.25"/>
+      <g transform="translate(20, 20)">
+        <rect width="150" height="24" rx="12" fill="#ffb800" fill-opacity="0.15" stroke="#ffb800" stroke-opacity="0.5"/>
+        <text x="14" y="16" font-family="'Inter', sans-serif" font-size="10" fill="#ffb800" font-weight="600">💰 FINANZAS &amp; CAJA</text>
+        <text x="380" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981" font-weight="600">MARGEN +28.4%</text>
+      </g>
+      <g transform="translate(20, 80)">
+        <text font-family="'Space Grotesk', sans-serif" font-size="34" fill="#e8ecf5" font-weight="700">$ 348.200</text>
+        <text x="190" y="-4" font-family="'Inter', sans-serif" font-size="12" fill="#10b981" font-weight="600">↑ HOY</text>
+        <text y="24" font-family="'Inter', sans-serif" font-size="11" fill="#8a92a8">Caja neta y margen en tiempo real</text>
+      </g>
+      <g transform="translate(20, 160)">
+        <path d="M0,80 Q60,60 120,50 T240,20 T380,50 L380,100 L0,100 Z" fill="url(#lineChartGrad)"/>
+        <path d="M0,80 Q60,60 120,50 T240,20 T380,50" fill="none" stroke="#10b981" stroke-width="2"/>
+        <circle cx="380" cy="50" r="4" fill="#10b981" filter="url(#glowSm)"/>
+      </g>
+      <g transform="translate(20, 300)">
+        <rect width="380" height="80" rx="8" fill="#ffb800" fill-opacity="0.05" stroke="#ffb800" stroke-opacity="0.3"/>
+        <rect x="0" y="0" width="3" height="80" fill="#ffb800"/>
+        <text x="18" y="24" font-family="'Inter', sans-serif" font-size="11" fill="#ffb800" font-weight="600">Aviso Antiinflación:</text>
+        <text x="18" y="44" font-family="'Inter', sans-serif" font-size="10" fill="#e8ecf5">El proveedor B ajusta 7% el lunes.</text>
+        <text x="18" y="62" font-family="'Inter', sans-serif" font-size="10" fill="#e8ecf5">Sugiero congelar compra de 40 u.</text>
+      </g>
+    </g>
+
+    <g transform="translate(940, 100)">
+      <rect width="420" height="440" rx="18" fill="url(#panelBg)" stroke="#a855f7" stroke-opacity="0.25"/>
+      <g transform="translate(20, 20)">
+        <rect width="130" height="24" rx="12" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-opacity="0.5"/>
+        <text x="14" y="16" font-family="'Inter', sans-serif" font-size="10" fill="#a855f7" font-weight="600">🤖 COPILOTO IA</text>
+        <text x="380" y="16" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#8a92a8">OFFLINE 100%</text>
+      </g>
+      <g transform="translate(20, 70)">
+        <circle cx="30" cy="30" r="22" fill="url(#mateRim)" filter="url(#glowSm)"/>
+        <circle cx="30" cy="30" r="16" fill="#0a0c1a"/>
+        <circle cx="30" cy="30" r="8" fill="#00e5ff"/>
+        <text x="65" y="24" font-family="'Space Grotesk', sans-serif" font-size="14" fill="#e8ecf5" font-weight="700">Agente Territorial</text>
+        <text x="65" y="42" font-family="'Inter', sans-serif" font-size="10" fill="#8a92a8">Motor Local Integrado</text>
+      </g>
+      <g transform="translate(20, 160)">
+        <rect width="380" height="140" rx="12" fill="#0a0c1a" stroke="#a855f7" stroke-opacity="0.3"/>
+        <text x="20" y="34" font-family="'Inter', sans-serif" font-size="11" fill="#e8ecf5" font-style="italic">"Detecté que los viernes vendés 40%</text>
+        <text x="20" y="54" font-family="'Inter', sans-serif" font-size="11" fill="#e8ecf5" font-style="italic">más lácteos. Te armé el pedido</text>
+        <text x="20" y="74" font-family="'Inter', sans-serif" font-size="11" fill="#e8ecf5" font-style="italic">óptimo para que no te quedes sin</text>
+        <text x="20" y="94" font-family="'Inter', sans-serif" font-size="11" fill="#e8ecf5" font-style="italic">stock."</text>
+        <rect x="80" y="86" width="2" height="12" fill="#00e5ff">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g transform="translate(20, 330)">
+        <rect width="180" height="30" rx="15" fill="#0a0c1a" stroke="#10b981" stroke-opacity="0.4"/>
+        <circle cx="15" cy="15" r="3" fill="#10b981"/>
+        <text x="28" y="20" font-family="'Inter', sans-serif" font-size="10" fill="#e8ecf5">0 datos a la nube</text>
+        <rect x="195" y="0" width="185" height="30" rx="15" fill="#0a0c1a" stroke="#ffb800" stroke-opacity="0.4"/>
+        <text x="210" y="20" font-family="'Inter', sans-serif" font-size="10" fill="#e8ecf5">⚡ Sin internet</text>
+      </g>
+    </g>
+
+    <g transform="translate(40, 620)">
+      <text font-family="'Inter', sans-serif" font-size="12" fill="#10b981">✓</text>
+      <text x="20" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8a92a8">Sin suscripciones en dólares</text>
+      <text x="280" font-family="'Inter', sans-serif" font-size="12" fill="#10b981">✓</text>
+      <text x="300" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8a92a8">Tus ventas en tu disco rígido</text>
+      <text x="620" font-family="'Inter', sans-serif" font-size="12" fill="#10b981">✓</text>
+      <text x="640" y="0" font-family="'Inter', sans-serif" font-size="12" fill="#8a92a8">Funciona cuando se corta la luz o internet</text>
+      <text x="1320" y="0" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#8a92a8" letter-spacing="1.5">v3.0 SOBERANO</text>
+    </g>
+  </svg>
+</div>
   </div>
 
   <div class="stats">
