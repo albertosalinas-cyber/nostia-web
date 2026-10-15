@@ -906,6 +906,320 @@ footer{
   color:var(--cyan);font-size:0.82rem;
 }
 
+  /* SECCIÓN SIMPLE PARA COMERCIANTE NO TÉCNICO */
+.seccion-simple{
+  padding:80px 5%;
+  max-width:1200px;
+  margin:0 auto;
+  position:relative;
+}
+
+.simple-header{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.simple-tag{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.8rem;
+  color:var(--cyan);
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  display:block;
+  margin-bottom:20px;
+}
+
+.simple-titulo{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(1.8rem,3.5vw,3rem);
+  font-weight:700;
+  line-height:1.1;
+  letter-spacing:-0.03em;
+  margin-bottom:24px;
+  background:linear-gradient(90deg,#00e5ff 0%,#a855f7 50%,#ff3b5c 100%);
+  background-size:300% 100%;
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:gradientMove 8s linear infinite;
+}
+
+.simple-sub{
+  font-size:1.15rem;
+  color:var(--text-dim);
+  max-width:680px;
+  margin:0 auto;
+  line-height:1.7;
+}
+
+.simple-sub strong{
+  color:var(--cyan);
+  font-weight:600;
+}
+
+/* 3 PASOS */
+.pasos-simples{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-bottom:60px;
+}
+
+.paso-simple{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:40px 30px;
+  text-align:center;
+  position:relative;
+  transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+
+.paso-simple:hover{
+  transform:translateY(-8px);
+  border-color:rgba(0,229,255,0.5);
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+
+.paso-numero{
+  position:absolute;
+  top:-16px;
+  left:30px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:var(--grad-2);
+  color:#000;
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:1.3rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 20px rgba(0,229,255,0.5);
+}
+
+.paso-icono{
+  font-size:3.5rem;
+  margin-bottom:20px;
+  display:block;
+  filter:drop-shadow(0 0 15px rgba(0,229,255,0.4));
+}
+
+.paso-simple h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.3rem;
+  font-weight:700;
+  margin-bottom:12px;
+  color:var(--text);
+}
+
+.paso-simple p{
+  color:var(--text-dim);
+  font-size:1rem;
+  line-height:1.6;
+}
+
+/* VIDEO COMERCIANTE */
+.video-comerciante{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:16px;
+  margin-bottom:60px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.video-comerciante-header{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 16px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.85rem;
+  color:var(--text);
+  font-weight:500;
+}
+
+.dot-live{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 10px var(--red);
+  animation:pulse 1.5s infinite;
+}
+
+.video-comerciante-wrap{
+  border-radius:14px;
+  overflow:hidden;
+  background:#000;
+}
+
+.video-placeholder-simple{
+  aspect-ratio:16/9;
+  background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(168,85,247,0.05));
+  border:2px dashed rgba(0,229,255,0.3);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  cursor:pointer;
+  transition:all 0.3s;
+  padding:40px 20px;
+}
+
+.video-placeholder-simple:hover{
+  border-color:var(--cyan);
+  background:linear-gradient(135deg,rgba(0,229,255,0.1),rgba(168,85,247,0.1));
+}
+
+.play-grande{
+  transition:transform 0.3s;
+}
+
+.video-placeholder-simple:hover .play-grande{
+  transform:scale(1.15);
+}
+
+.video-placeholder-texto{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.9rem;
+  color:var(--text-dim);
+  text-align:center;
+  max-width:500px;
+  line-height:1.5;
+}
+
+/* TESTIMONIOS */
+.testimonios{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+  margin-bottom:60px;
+}
+
+.testimonio{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px 28px;
+  transition:all 0.4s cubic-bezier(0.23,1,0.32,1);
+  position:relative;
+}
+
+.testimonio:hover{
+  transform:translateY(-6px);
+  border-color:rgba(255,184,0,0.4);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.testimonio-avatar{
+  font-size:2.5rem;
+  margin-bottom:20px;
+  display:block;
+}
+
+.testimonio-texto{
+  font-size:1rem;
+  line-height:1.7;
+  color:var(--text);
+  margin-bottom:20px;
+  font-style:italic;
+}
+
+.testimonio-texto strong{
+  color:var(--cyan);
+  font-weight:600;
+  font-style:normal;
+}
+
+.testimonio-firma{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.85rem;
+  color:var(--text-dim);
+  padding-top:16px;
+  border-top:1px solid var(--border);
+}
+
+/* CTA SIMPLE */
+.cta-simple{
+  text-align:center;
+  background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(168,85,247,0.06));
+  border:1px solid rgba(0,229,255,0.3);
+  border-radius:24px;
+  padding:60px 40px;
+  max-width:900px;
+  margin:0 auto;
+}
+
+.cta-simple h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(1.5rem,2.5vw,2rem);
+  font-weight:700;
+  margin-bottom:16px;
+  color:var(--text);
+  letter-spacing:-0.02em;
+}
+
+.cta-simple-sub{
+  font-size:1.05rem;
+  color:var(--text-dim);
+  margin-bottom:36px;
+}
+
+.cta-simple-botones{
+  display:flex;
+  gap:16px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn-simple{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 32px;
+  border-radius:12px;
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  font-size:1rem;
+  text-decoration:none;
+  transition:all 0.3s;
+  cursor:pointer;
+}
+
+.btn-whatsapp-simple{
+  background:var(--surface);
+  border:2px solid #25D366;
+  color:var(--text);
+}
+
+.btn-whatsapp-simple:hover{
+  background:rgba(37,211,102,0.1);
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(37,211,102,0.3);
+}
+
+.btn-llamar-simple{
+  background:var(--grad-2);
+  color:#000;
+  border:2px solid transparent;
+}
+
+.btn-llamar-simple:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 40px rgba(0,229,255,0.5);
+}
+
+@media(max-width:768px){
+  .seccion-simple{padding:60px 5%;}
+  .paso-simple{padding:32px 24px;}
+  .cta-simple{padding:40px 24px;}
+  .btn-simple{width:100%;justify-content:center;}
+}
 /* RESPONSIVE */
 @media(max-width:968px){
   .hero-grid{grid-template-columns:1fr;gap:40px;}
@@ -1296,6 +1610,104 @@ footer{
   </div>
 </header>
 
+  <!-- SECCIÓN PARA EL COMERCIANTE NO TÉCNICO -->
+<section id="comerciante" class="seccion-simple">
+  <div class="simple-header">
+    <span class="simple-tag">// PARA VOS, QUE ESTÁS EN EL MOSTRADOR</span>
+    <h2 class="simple-titulo">Si sabés usar WhatsApp,<br>sabés usar NOST-IA.</h2>
+    <p class="simple-sub">
+      No necesitás saber de computadoras. No necesitás internet. 
+      No necesitás instalar nada raro. <strong>Es más fácil que sacar una foto.</strong>
+    </p>
+  </div>
+
+  <!-- 3 PASOS VISUALES -->
+  <div class="pasos-simples">
+    <div class="paso-simple">
+      <div class="paso-numero">1</div>
+      <div class="paso-icono">⬇️</div>
+      <h3>Descargás el archivo</h3>
+      <p>Un solo archivo. Pesado como una canción. Se baja en 1 minuto, aunque tengas internet lento.</p>
+    </div>
+    <div class="paso-simple">
+      <div class="paso-numero">2</div>
+      <div class="paso-icono">🖱️</div>
+      <h3>Hacés doble clic</h3>
+      <p>Se abre solo. Como abrir una foto. No hay que escribir comandos ni nada por el estilo.</p>
+    </div>
+    <div class="paso-simple">
+      <div class="paso-numero">3</div>
+      <div class="paso-icono">✅</div>
+      <h3>Empezás a usarlo</h3>
+      <p>Sacale una foto a la factura del proveedor y NOST-IA la lee sola. Vos seguí atendiendo.</p>
+    </div>
+  </div>
+
+  <!-- VIDEO DE COMERCIANTE REAL -->
+  <div class="video-comerciante">
+    <div class="video-comerciante-header">
+      <span class="dot-live"></span>
+      <span>Don Ramón, ferretero de Mataderos, lo usa todos los días</span>
+    </div>
+    <div class="video-comerciante-wrap">
+      <div class="video-placeholder-simple" onclick="alert('Video en producción. Muy pronto vas a poder ver a Don Ramón usando NOST-IA en su ferretería.')">
+        <div class="play-grande">
+          <svg viewBox="0 0 68 48" width="80" height="56">
+            <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#ff0000"/>
+            <path d="M 45,24 27,14 27,34" fill="#fff"/>
+          </svg>
+        </div>
+        <p class="video-placeholder-texto">Video en producción · Pronto vas a ver a Don Ramón usando NOST-IA en su ferretería</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIOS -->
+  <div class="testimonios">
+    <div class="testimonio">
+      <div class="testimonio-avatar">👨‍🍳</div>
+      <div class="testimonio-texto">
+        "Antes tardaba media hora cargando una factura. Ahora le saco una foto y listo. 
+        Y me dice si le estoy ganando o perdiendo. <strong>No sé cómo vivía sin esto.</strong>"
+      </div>
+      <div class="testimonio-firma">— Marta, panadería en Liniers</div>
+    </div>
+    <div class="testimonio">
+      <div class="testimonio-avatar">🔧</div>
+      <div class="testimonio-texto">
+        "Yo de computadoras no sé nada. Mi hijo me lo instaló en 5 minutos. 
+        Y lo mejor: <strong>no necesita internet</strong>. Cuando se corta la luz, sigue andando."
+      </div>
+      <div class="testimonio-firma">— Héctor, cerrajería en Mataderos</div>
+    </div>
+    <div class="testimonio">
+      <div class="testimonio-avatar">🛒</div>
+      <div class="testimonio-texto">
+        "Lo que más me gusta es que <strong>mis datos son míos</strong>. 
+        Los precios de compra no se los doy a nadie. Ni a una empresa, ni a un banco, ni a nadie."
+      </div>
+      <div class="testimonio-firma">— Roberto, almacén en Villa Lugano</div>
+    </div>
+  </div>
+
+  <!-- CTA CON TELÉFONO -->
+  <div class="cta-simple">
+    <h3>¿Tenés dudas? Llamame. Te atiendo yo.</h3>
+    <p class="cta-simple-sub">No hay call center. No hay robots. Soy Alberto, el que hizo el sistema.</p>
+    <div class="cta-simple-botones">
+      <a href="https://wa.me/5491137689803?text=Hola%20Alberto%2C%20tengo%20un%20comercio%20y%20quiero%20probar%20NOST-IA" 
+         class="btn-simple btn-whatsapp-simple" target="_blank">
+        <svg viewBox="0 0 24 24" fill="#25D366" width="22" height="22">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        WhatsApp: 11-3768-9803
+      </a>
+      <a href="tel:+5491137689803" class="btn-simple btn-llamar-simple">
+        📞 Llamar por teléfono
+      </a>
+    </div>
+  </div>
+</section>
 <!-- FILOSOFÍA -->
 <section id="filosofia">
   <span class="section-tag">// 01 — Filosofía</span>
