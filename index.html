@@ -1234,13 +1234,17 @@ footer{
   .hero{padding:120px 5% 60px;}
   .demo-wrap{transform:none;}
 }
-  /* PARCHE MAESTRO PARA EL FONDO DEL HERO */
+  /* PARCHE MAESTRO DEFINITIVO - AZUL INCONFUNDIBLE */
 header.hero {
-  background-color: #1e293b !important; /* Fuerza el azul pizarra */
+  background-color: #1e3a8a !important; /* Azul real, imposible de confundir con negro */
+  background-image: none !important; /* Elimina cualquier degradado oscuro que lo tape */
 }
 
-body {
-  background-color: #03040a !important; /* Asegura que el resto de la página siga negra */
+/* Asegura que las letras blancas brillen sobre el azul */
+.titulo-principal, .titulo-principal .char {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important; /* Sombra sutil para que resalte */
 }
 </style>
 </head>
