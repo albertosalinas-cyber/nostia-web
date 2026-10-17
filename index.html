@@ -212,16 +212,16 @@ nav.scrolled{padding:10px 5%;}
   padding:140px 5% 60px;
   position:relative;
   overflow:hidden;
+  background-color: #1e293b; /* Fondo azul pizarra SOLO para el Hero */
 }
 .hero::before{
   content:'';position:absolute;inset:0;
   background-image:
-    linear-gradient(rgba(0,229,255,0.04) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,229,255,0.04) 1px,transparent 1px);
+    linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
   background-size:60px 60px;
   z-index:-1;
-  mask-image:radial-gradient(ellipse at center,black 30%,transparent 90%);
-  -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 90%);
+  /* Le sacamos la máscara oscura para que la grilla no se pierda en los bordes */
 }
 
 .hero-grid{
@@ -257,13 +257,14 @@ nav.scrolled{padding:10px 5%;}
 
 /* TÍTULO PRINCIPAL CON ONDA LUMINOSA */
 .titulo-principal{
-  'Poppins',sans-serif;
-  font-size:clamp(2.2rem,4.5vw,4rem);
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(1.8rem,3.8vw,3.5rem);
   font-weight:700;
-  line-height:1.08;
+  line-height:1.1;
   letter-spacing:-0.04em;
   margin-bottom:32px;
-  max-width:900px;
+  max-width:950px;
+  color: #ffffff; /* Blanco puro */
 }
 
 .titulo-principal .palabra{
@@ -274,15 +275,13 @@ nav.scrolled{padding:10px 5%;}
 
 .titulo-principal .char{
   display:inline-block;
-  background:linear-gradient(90deg,#2e86de 0%,#ff9f43 25%,#2e86de 50%,#ff9f43 75%,#2e86de 100%);
-  background-size:300% 100%;
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:charGradient 6s linear infinite;
-  filter:drop-shadow(0 4px 15px rgba(46,134,222,0.3));
-  will-change:transform,opacity,filter;
+  color: #ffffff; /* Blanco puro */
+  -webkit-text-fill-color: #ffffff; /* Elimina el degradado transparente */
+  background: none; /* Elimina el fondo de colores */
+  filter: none; /* Elimina el brillo neón */
+  will-change:transform,opacity;
   position:relative;
-  opacity:0;
+  opacity:0; /* Lo dejamos en 0 porque el JS lo hace visible */
 }
 @keyframes charGradient{
   0%{background-position:0% 50%;}
@@ -309,7 +308,7 @@ nav.scrolled{padding:10px 5%;}
 
 .hero p.lead{
   font-size:clamp(1rem,1.4vw,1.2rem);
-  color:#94a3b8; /* Gris azulado, descansa la vista */
+  color:#cbd5e1; /* Gris claro legible sobre el azul */
   max-width:620px;
   margin-bottom:48px;
   line-height:1.7;
