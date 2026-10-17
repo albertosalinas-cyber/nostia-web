@@ -236,18 +236,20 @@ nav.scrolled{padding:10px 5%;}
 .hero-text{z-index:2;}
 
 .badge{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:8px 16px;border-radius:100px;
-  background:rgba(0,229,255,0.08);
-  border:1px solid rgba(0,229,255,0.2);
-  color:var(--cyan);font-size:0.75rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 20px;border-radius:100px;
+  background:#ffffff; /* Fondo blanco puro */
+  border:none;
+  color:#1e3a8a; /* Texto azul oscuro, igual al fondo del Hero */
+  font-size:0.8rem;font-weight:800; /* Letra un poco más gruesa */
   letter-spacing:0.05em;text-transform:uppercase;
   width:fit-content;margin-bottom:32px;
-  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2); /* Sombra para que flote */
 }
 .badge-dot{
-  width:6px;height:6px;border-radius:50%;background:var(--green);
-  box-shadow:0 0 10px var(--green);
+  width:8px;height:8px;border-radius:50%;
+  background:#10b981; /* Verde esmeralda */
+  box-shadow:0 0 10px rgba(16,185,129,0.6);
   animation:pulse 2s infinite;
 }
 @keyframes pulse{
