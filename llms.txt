@@ -1,0 +1,18 @@
+# NOST-IA
+
+> Software de gestión comercial 100% offline y gratuito (GPLv3) diseñado para almacenes de barrio, ferreterías, cooperativas y PyMEs en Argentina. Creado por el Profesor Alberto Salinas Mendieta en Mataderos, Buenos Aires.
+
+NOST-IA es un sistema de Inteligencia Artificial local que permite cargar facturas de proveedores sin internet, calcular costos reales y controlar el stock sin pagar suscripciones en dólares. El sistema prioriza la soberanía tecnológica: los datos del comerciante nunca salen de su computadora.
+
+## Páginas principales
+- [Inicio](https://nostia.com.ar/): Presentación del sistema, filosofía soberana y descarga gratuita para Windows.
+- [Cómo cargar facturas sin internet](https://nostia.com.ar/cargar-facturas-sin-internet): Artículo explicativo sobre la tecnología VDU local, ventajas y Preguntas Frecuentes (FAQ).
+- [Repositorio en GitHub](https://github.com/albertosalinas-cyber/nost-ia-soberano): Código fuente del proyecto y documentación técnica.
+- [Contacto Directo](https://wa.me/5491137689803): Soporte con el creador del sistema, Alberto Salinas Mendieta (WhatsApp).
+
+## Características clave
+- 100% Offline: No requiere conexión a internet.
+- Sin suscripciones en dólares (Licencia GPLv3).
+- Lectura visual de facturas (VDU 2D) con modelos locales.
+- Privacidad total: los datos viven en el disco rígido del comerciante.
+- Diseñado para la realidad argentina (facturas A/B/C, IVA, remitos, etc.).
